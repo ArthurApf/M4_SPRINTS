@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+using namespace std;
+
 
 // 1 -  Faça uma função que recebe uma certa medida e ajusta ela percentualmente 
 // entre dois valores mínimo e máximo e retorna esse valor
@@ -47,20 +49,29 @@ int main(){
   std::cout << "Insira o tamanho do vetor";
   std::cin >> tamanho;
 
-  for(int i=0; i=tamanho; i++){
+  int arr[tamanho], i, elemento;
+  std::cout << "Entre com os elementos";
 
-    int conteudo = 0;
-    std::cout << "Insira um numeiro inteiro no vetor"; 
-    std::cin >> conteudo;
+  for(i=0; i<tamanho; i++){
 
-    int arr[tamanho];
-    arr[0] = conteudo;
-
-    std::cout << arr[tamanho];
+    std::cin >> arr[i]; 
 
   }
 
+  std::cout << "insira o ultimo elemento do array";
+  std::cin >> elemento;
 
+  arr[i] = elemento;
+
+  std::cout << "Seu vetor: ";
+  for(i=0; i<tamanho; i++){
+
+    std::cout << arr[i] << " ";
+  }
+
+  std::cout << endl;
+
+  return 0;
 
 }
 
