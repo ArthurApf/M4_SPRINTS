@@ -4,8 +4,35 @@
 // 1 -  Faça uma função que recebe uma certa medida e ajusta ela percentualmente 
 // entre dois valores mínimo e máximo e retorna esse valor
 
+main(double medida, int min, int max){
+
+    std::cout << "Insira uma medida";
+    std::cin >> medida;
+
+    std::cout << "Insira o maior numero";
+    std::cin >> max;
+
+    std::cout << "Insira o menor numero";
+    std::cin >> min;
+
+    int sub = max - min;
+    double porcentagem = medida/sub;
+
+    std::cout << "A porcentagem correspondente: " << porcentagem;
+
+}
+
 // 2 - Faça uma função que simule a leitura de um sensor lendo o 
 // valor do teclado ao final a função retorna este valor
+
+main(int ret){
+
+    std::cout << "Digite 1 ou 0: "; 
+    std::cin >> ret;
+    
+    return ret; 
+    
+}
 
 // 3 - Faça uma função que armazena uma medida inteira qualquer 
 // em um vetor fornecido. Note que como C não possui vetores 
@@ -13,6 +40,29 @@
 // valor máximo do vetor assim como a última posição preenchida
 // Evite também que, por acidente, um valor seja escrito em 
 // uma área de memória fora do vetor
+
+int main(){
+  
+  int tamanho = 1;
+  std::cout << "Insira o tamanho do vetor";
+  std::cin >> tamanho;
+
+  for(int i=0; i=tamanho; i++){
+
+    int conteudo = 0;
+    std::cout << "Insira um numeiro inteiro no vetor"; 
+    std::cin >> conteudo;
+
+    int arr[tamanho];
+    arr[0] = conteudo;
+
+    std::cout << arr[tamanho];
+
+  }
+
+
+
+}
 
 
 
@@ -28,6 +78,20 @@
 // 5 - Faça uma função que pergunta ao usuário se ele deseja continuar o mapeamento e 
 // retorna verdadeiro ou falso
 
+main(){
+
+    int boo = 0;
+
+    while(boo == 0) {
+
+        std::cout << "Digite 1 para parar o mapeamento!";
+        std::cin >> boo;
+
+    }
+
+    cout << "Mapeamento interrompido";
+
+}
 
 // 6 - A função abaixo (que está incompleta) vai "dirigindo" virtualmente um robô 
 // e através de 4 sensores em cada um dos 4 pontos do robo ("Direita", "Esquerda", 
