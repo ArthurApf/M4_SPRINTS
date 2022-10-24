@@ -83,7 +83,43 @@ int main(){
 // de maior distância ("Direita", "Esquerda", "Frente", "Tras") e a 
 // segunda é esta maior distância.
 
+main(){
+    int direta = 0;
+    int esquerda = 0;
+    int frente = 0;
+    int tras = 0;
 
+    std::cout <<"Insira a distancia a direita";
+    std::cin >> direta;
+    std::cout <<"Insira a distancia a esquerda";
+    std::cin >> esquerda;
+    std::cout <<"Insira a distancia a frente";
+    std::cin >> frente;
+    std::cout <<"Insira a distancia a tras";
+    std::cin >> tras;
+
+    int pos[4];
+    pos[0] = direta;
+    pos[1] = esquerda;
+    pos[2] = frente;
+    pos[3] = tras;
+
+    if(pos[0] > pos[1] && pos[0] > pos[2] && pos[0] > pos[3]){
+        std::cout << "Direta é maior distancia";
+    }
+
+    if(pos[1] > pos[0] && pos[1] > pos[2] && pos[1] > pos[3]){
+        std::cout << "Esquerda é maior distancia";
+    }
+
+    if(pos[2] > pos[1] && pos[2] > pos[0] && pos[2] > pos[3]){
+        std::cout << "A frente é maior distancia";
+    }
+
+    if(pos[3] > pos[1] && pos[3] > pos[2] && pos[3] > pos[0]){
+        std::cout << "Tras é maior distancia";
+    }
+}
 
 
 // 5 - Faça uma função que pergunta ao usuário se ele deseja continuar o mapeamento e 
