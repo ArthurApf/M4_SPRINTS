@@ -89,13 +89,13 @@ main(){
     int frente = 0;
     int tras = 0;
 
-    std::cout <<"Insira a distancia a direita";
+    std::cout <<"Insira a distancia a direita ";
     std::cin >> direta;
-    std::cout <<"Insira a distancia a esquerda";
+    std::cout <<"Insira a distancia a esquerda ";
     std::cin >> esquerda;
-    std::cout <<"Insira a distancia a frente";
+    std::cout <<"Insira a distancia a frente ";
     std::cin >> frente;
-    std::cout <<"Insira a distancia a tras";
+    std::cout <<"Insira a distancia a tras ";
     std::cin >> tras;
 
     int pos[4];
@@ -105,19 +105,19 @@ main(){
     pos[3] = tras;
 
     if(pos[0] > pos[1] && pos[0] > pos[2] && pos[0] > pos[3]){
-        std::cout << "Direta é maior distancia";
+        std::cout << "Direta é maior distancia com " << direta;
     }
 
     if(pos[1] > pos[0] && pos[1] > pos[2] && pos[1] > pos[3]){
-        std::cout << "Esquerda é maior distancia";
+        std::cout << "Esquerda é maior distancia com " << esquerda;
     }
 
     if(pos[2] > pos[1] && pos[2] > pos[0] && pos[2] > pos[3]){
-        std::cout << "A frente é maior distancia";
+        std::cout << "A frente é maior distancia com " << frente;
     }
 
     if(pos[3] > pos[1] && pos[3] > pos[2] && pos[3] > pos[0]){
-        std::cout << "Tras é maior distancia";
+        std::cout << "Tras é maior distancia com " << tras;
     }
 }
 
