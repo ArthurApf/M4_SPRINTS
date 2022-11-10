@@ -93,7 +93,11 @@ int insereVetor(){
 
 int main(){
 
-
+  int start = 0;
+  while(start == 0){
+    cout << "Digite algum numero para começar";  
+  }
+  insereVetor();
 
 }
 
