@@ -8,10 +8,11 @@ using namespace std;
 
 int converteSensor(double medida, int min, int max){
 
-    int sub = max - min;
-    double porcentagem = medida/sub;
+    int sub = (max*100) - (min*100);
+    double porcentagem = (medida*100) - (min*100)
+    double resp = sub/porcentagem
 
-    std::cout << "A porcentagem correspondente: " << porcentagem;
+    std::cout << "A porcentagem correspondente: " << resp;
 
 }
 
