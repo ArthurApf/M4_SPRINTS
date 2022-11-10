@@ -6,16 +6,7 @@ using namespace std;
 // 1 -  Faça uma função que recebe uma certa medida e ajusta ela percentualmente 
 // entre dois valores mínimo e máximo e retorna esse valor
 
-main(double medida, int min, int max){
-
-    std::cout << "Insira uma medida";
-    std::cin >> medida;
-
-    std::cout << "Insira o maior numero";
-    std::cin >> max;
-
-    std::cout << "Insira o menor numero";
-    std::cin >> min;
+converteSensor(double medida, int min, int max){
 
     int sub = max - min;
     double porcentagem = medida/sub;
@@ -24,16 +15,41 @@ main(double medida, int min, int max){
 
 }
 
+int main(){
+    cout << "Teste Ex 1" << endl;
+	cout << converteSensor(100,100,400) << endl;
+  //valor esperado: 0
+  
+	cout << converteSensor(400,100,400) << endl;
+  //valor esperado: 1
+  
+	cout << converteSensor(250,100,400) << endl;
+  //valor esperado: 0.5
+
+    cout << converteSensor(80,50,90) << endl;
+  //valor esperado: 0.75
+
+    cout << converteSensor(625,250,1000) << endl;
+  //valor esperado: 0.5
+
+}
+
 // 2 - Faça uma função que simule a leitura de um sensor lendo o 
 // valor do teclado ao final a função retorna este valor
 
-main(int ret){
+leComando(){
 
-    std::cout << "Digite 1 ou 0: "; 
-    std::cin >> ret;
-    
-    return ret; 
-    
+    int zero_ou_um; 
+    cin >> zero_ou_um; 
+        
+}
+
+main(){
+ 
+    cout << "Digite o Comando (0 ou 1):";
+	int cmd = leComando();
+	cout << "Comando Recebido: " << cmd << endl;
+
 }
 
 // 3 - Faça uma função que armazena uma medida inteira qualquer 
