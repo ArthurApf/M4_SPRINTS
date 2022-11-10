@@ -6,13 +6,13 @@ using namespace std;
 // 1 -  Faça uma função que recebe uma certa medida e ajusta ela percentualmente 
 // entre dois valores mínimo e máximo e retorna esse valor
 
-int converteSensor(double medida, int min, int max){
+int converteSensor(float medida, float min, float max){
 
-    int sub = (max*100) - (min*100);
-    double porcentagem = (medida*100) - (min*100)
-    double resp = sub/porcentagem
+    float sub = max - min;
+    float sub2 = medida - min;
+    float porcentagem = sub/sub2;
 
-    std::cout << "A porcentagem correspondente: " << resp;
+    std::cout << "A porcentagem correspondente: " << porcentagem;
 
 }
 
