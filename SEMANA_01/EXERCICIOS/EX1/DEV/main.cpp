@@ -143,18 +143,25 @@ int main(){
 // 5 - Faça uma função que pergunta ao usuário se ele deseja continuar o mapeamento e 
 // retorna verdadeiro ou falso
 
-main(){
+boolean(){
 
-    int boo = 0;
+  int boo = 1;
 
-    while(boo == 0) {
+  while(boo == 0) {
 
-        std::cout << "Digite 1 para parar o mapeamento!";
-        std::cin >> boo;
+    std::cout << "Digite 1 para parar o mapeamento!";
+    std::cin >> boo;
+    cout << "Mapeamento interrompido"
 
-    }
+  }
 
-    cout << "Mapeamento interrompido";
+}
+
+int main(){`
+
+  cout << "Digite 0 para começar";
+  cin >> boo;
+  boolean();
 
 }
 
