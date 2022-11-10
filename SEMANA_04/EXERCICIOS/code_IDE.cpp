@@ -142,7 +142,7 @@ void loop() {
 
   if(butt2_pressed == LOW){
    for(int k=0; k<=ct-1; ++k){
-     Serial.println(vec[i]);
+     Serial.println(vec[k]);
 
       if(vec[k] == 0){
       vec_2[0] = 0;
@@ -245,8 +245,8 @@ void loop() {
       for(int n=0; n<4; ++n){
         digitalWrite(led[n], vec_2[n]);
       }  
-      tone(buz,vec[n]*500,400);
-      vec[n] = 0;
+      tone(buz,vec[k]*500,400);
+      vec[k] = 0;
       delay(1000);
    }
 
