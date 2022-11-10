@@ -149,21 +149,26 @@ int main(){
 
 boolean(){
 
-  int boo = 1;
+  int boo;
 
   while(boo == 0) {
 
     std::cout << "Digite 1 para parar o mapeamento!";
     std::cin >> boo;
-    cout << "Mapeamento interrompido"
+  }
 
+  if(boo == 1){
+    cout << "Mapeamento interrompido"
+  }
+  else{
+    boo = 0;
   }
 
 }
 
 int main(){`
 
-  cout << "Digite 0 para começar";
+  cout << "Digite 0 para inciar o programa";
   cin >> boo;
   boolean();
 
