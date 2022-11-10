@@ -6,7 +6,7 @@ using namespace std;
 // 1 -  Faça uma função que recebe uma certa medida e ajusta ela percentualmente 
 // entre dois valores mínimo e máximo e retorna esse valor
 
-converteSensor(double medida, int min, int max){
+int converteSensor(double medida, int min, int max){
 
     int sub = max - min;
     double porcentagem = medida/sub;
@@ -37,14 +37,14 @@ int main(){
 // 2 - Faça uma função que simule a leitura de um sensor lendo o 
 // valor do teclado ao final a função retorna este valor
 
-leComando(){
+int leComando(){
 
     int zero_ou_um; 
     cin >> zero_ou_um; 
         
 }
 
-main(){
+int main(){
  
     cout << "Digite o Comando (0 ou 1):";
 	int cmd = leComando();
@@ -59,7 +59,7 @@ main(){
 // Evite também que, por acidente, um valor seja escrito em 
 // uma área de memória fora do vetor
 
-int main(){
+int insereVetor(){
   
   int tamanho = 1;
   std::cout << "Insira o tamanho do vetor";
@@ -91,6 +91,12 @@ int main(){
 
 }
 
+int main(){
+
+
+
+}
+
 
 
 // 4 - Faça uma função que recebe um vetor com 4 posições que contém 
@@ -99,44 +105,40 @@ int main(){
 // de maior distância ("Direita", "Esquerda", "Frente", "Tras") e a 
 // segunda é esta maior distância.
 
-main(){
-    int direta = 0;
-    int esquerda = 0;
-    int frente = 0;
-    int tras = 0;
+int maiorDist(int direta, int esquerda, int frente, int tras){
+     
+  int pos[4];
+  pos[0] = direta;
+  pos[1] = esquerda;
+  pos[2] = frente;
+  pos[3] = tras;
 
-    std::cout <<"Insira a distancia a direita ";
-    std::cin >> direta;
-    std::cout <<"Insira a distancia a esquerda ";
-    std::cin >> esquerda;
-    std::cout <<"Insira a distancia a frente ";
-    std::cin >> frente;
-    std::cout <<"Insira a distancia a tras ";
-    std::cin >> tras;
+  if(pos[0] > pos[1] && pos[0] > pos[2] && pos[0] > pos[3]){
+      std::cout << "Direta é maior distancia com " << direta;
+  }
 
-    int pos[4];
-    pos[0] = direta;
-    pos[1] = esquerda;
-    pos[2] = frente;
-    pos[3] = tras;
+  if(pos[1] > pos[0] && pos[1] > pos[2] && pos[1] > pos[3]){
+      std::cout << "Esquerda é maior distancia com " << esquerda;
+  }
 
-    if(pos[0] > pos[1] && pos[0] > pos[2] && pos[0] > pos[3]){
-        std::cout << "Direta é maior distancia com " << direta;
-    }
+  if(pos[2] > pos[1] && pos[2] > pos[0] && pos[2] > pos[3]){
+      std::cout << "A frente é maior distancia com " << frente;
+  }
 
-    if(pos[1] > pos[0] && pos[1] > pos[2] && pos[1] > pos[3]){
-        std::cout << "Esquerda é maior distancia com " << esquerda;
-    }
-
-    if(pos[2] > pos[1] && pos[2] > pos[0] && pos[2] > pos[3]){
-        std::cout << "A frente é maior distancia com " << frente;
-    }
-
-    if(pos[3] > pos[1] && pos[3] > pos[2] && pos[3] > pos[0]){
-        std::cout << "Tras é maior distancia com " << tras;
-    }
+  if(pos[3] > pos[1] && pos[3] > pos[2] && pos[3] > pos[0]){
+    std::cout << "Tras é maior distancia com " << tras;
+  }
 }
 
+int main(){
+
+  cout << maiorDist(100, 400, 300, 200); << endl;
+
+  cout << maiorDist(25, 35, 45, 55); << endl;
+
+  cout << maiorDist(4, 1, 300, 7); << endl;
+
+}
 
 // 5 - Faça uma função que pergunta ao usuário se ele deseja continuar o mapeamento e 
 // retorna verdadeiro ou falso
