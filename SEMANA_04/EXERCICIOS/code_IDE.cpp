@@ -15,8 +15,8 @@ float bin(float ldr, float min, float max){
 void setup() {
   Serial.begin(115200);
     for(int i=0;i<=4; ++i){
-    pinMode(led[i], OUTPUT);
-  }
+      pinMode(led[i], OUTPUT);
+    }
   pinMode(ldr, INPUT);
   pinMode(butt1, INPUT_PULLUP);
   pinMode(butt2, INPUT_PULLUP);
@@ -24,8 +24,8 @@ void setup() {
 
 
 void loop() {
-  int ldr_value = analogRead(ldr);
-  int ldr_bin = bin(ldr_value,8126,64);
+  int ldr_val = analogRead(ldr);
+  int ldr_bin = bin(ldr_val,8126,64);
   int butt1_pressed = digitalRead(butt1);
   int butt2_pressed = digitalRead(butt2);
 
@@ -134,119 +134,119 @@ void loop() {
 
     delay(300);
 
-    for(int i=0; i<4; i++){
-      digitalWrite(led[i], vec_2[i]);
+    for(int j=0; j<4; j++){
+      digitalWrite(led[j], vec_2[j]);
     }  
     tone(buz,ldr_bin*500,400);
   }
 
   if(butt2_pressed == LOW){
-   for(int i=0; i<=ct-1; ++i){
+   for(int k=0; k<=ct-1; ++k){
      Serial.println(vec[i]);
 
-      if(vec[i] == 0){
+      if(vec[k] == 0){
       vec_2[0] = 0;
       vec_2[1] = 0;
       vec_2[2] = 0;
       vec_2[3] = 0;
       }
 
-      else if(vec[i] == 1){
+      else if(vec[k] == 1){
       vec_2[0] = 0;
       vec_2[1] = 0;
       vec_2[2] = 0;
       vec_2[3] = 1;
       }
-      else if(vec[i] == 2){
+      else if(vec[k] == 2){
       vec_2[0] = 0;
       vec_2[1] = 0;
       vec_2[2] = 1;
       vec_2[3] = 0;
       }
-      else if(vec[i] == 3){
+      else if(vec[k] == 3){
       vec_2[0] = 0;
       vec_2[1] = 0;
       vec_2[2] = 1;
       vec_2[3] = 1;
       }
-      else if(vec[i] == 4){
+      else if(vec[k] == 4){
       vec_2[0] = 0;
       vec_2[1] = 1;
       vec_2[2] = 0;
       vec_2[3] = 0;
       }
-      else if(vec[i] == 5){
+      else if(vec[k] == 5){
       vec_2[0] = 0;
       vec_2[1] = 1;
       vec_2[2] = 0;
       vec_2[3] = 1;
       }
-      else if(vec[i] == 6){
+      else if(vec[k] == 6){
       vec_2[0] = 0;
       vec_2[1] = 1;
       vec_2[2] = 1;
       vec_2[3] = 0;
       }
-      else if(vec[i] == 7){
+      else if(vec[k] == 7){
       vec_2[0] = 0;
       vec_2[1] = 1;
       vec_2[2] = 1;
       vec_2[3] = 1;
       }
-      else if(vec[i] == 8){
+      else if(vec[k] == 8){
       vec_2[0] = 1;
       vec_2[1] = 0;
       vec_2[2] = 0;
       vec_2[3] = 0;
       }
-      else if(vec[i] == 9){
+      else if(vec[k] == 9){
       vec_2[0] = 1;
       vec_2[1] = 0;
       vec_2[2] = 0;
       vec_2[3] = 1;
       } 
-      else if(vec[i] == 10){
+      else if(vec[k] == 10){
       vec_2[0] = 1;
       vec_2[1] = 0;
       vec_2[2] = 1;
       vec_2[3] = 0;
       }
-      else if(ldr_bin == 11){
+      else if(vec[k] == 11){
       vec_2[0] = 1;
       vec_2[1] = 0;
       vec_2[2] = 1;
       vec_2[3] = 1;
       }
-      else if(vec[i] == 12){
+      else if(vec[k] == 12){
       vec_2[0] = 1;
       vec_2[1] = 1;
       vec_2[2] = 0;
       vec_2[3] = 0;
       }
-      else if(vec[i] == 13){
+      else if(vec[k] == 13){
       vec_2[0] = 1;
       vec_2[1] = 0;
       vec_2[2] = 1;
       vec_2[3] = 1;
       }
-      else if(vec[i] == 14){
+      else if(vec[k] == 14){
       vec_2[0] = 1;
       vec_2[1] = 1;
       vec_2[2] = 1;
       vec_2[3] = 0;
       }
-      else if(vec[i] == 15){
+      else if(vec[k] == 15){
       vec_2[0] = 1;
       vec_2[1] = 1;
       vec_2[2] = 1;
       vec_2[3] = 1;
       }
 
-      for(int i=0; i<4; ++i){
-        digitalWrite(led[i], vec_2[i]);
+      for(int n=0; n<4; ++n){
+        digitalWrite(led[n], vec_2[n]);
       }  
-      tone(buz,vec[i]*500,400);
-      vec[i] = 0;
+      tone(buz,vec[n]*500,400);
+      vec[n] = 0;
       delay(1000);
    }
 
