@@ -1,0 +1,10 @@
+O jogo se trata de dois jogadores competindo para clicarem mais rapido;
+
+Caso o jogador 1 ganhe, o led azul acenderá;
+
+Caso o jogador 2 ganhe, o led laranja acenderá;
+
+Caso haja empate, o led amarelo acenderá;
+
+
+A disputa de clicks é revesada, existem dois botões no html com indicações para cada jogador.
