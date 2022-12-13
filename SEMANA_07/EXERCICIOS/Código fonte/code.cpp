@@ -156,15 +156,15 @@ void setup(void) {
   server.begin();
   Serial.println("HTTP server started");
 
-  if(/*pontos > pontos2*/){
+  if("pontos > pontos2"){
     digitalWrite(45, HIGH);
   }
 
-  if(/*pontos < pontos2*/){
+  if("pontos < pontos2"){
     digitalWrite(48, HIGH);
   }
 
-  if(/*pontos == pontos2*/){
+  if("pontos == pontos2"){
     digitalWrite(46, HIGH);
   }
 }
